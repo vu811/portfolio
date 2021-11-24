@@ -15,5 +15,5 @@ darkMode.addEventListener('click', () => {
   darkMode.innerHTML = `<i class="fas fa-${icon}"></i>`
 })
 
-const gg = await v_.get('home')
-document.querySelector('#app').innerHTML = gg
+//const gg = await v_.get('home')
+//document.querySelector('#app').innerHTML = gg

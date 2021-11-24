@@ -11,8 +11,5 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^2.2.19"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4"
   }
 }
