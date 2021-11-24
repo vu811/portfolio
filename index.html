@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vu Nguyen's portfolio</title>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link href="/public/style.css" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen flex flex-col justify-around bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-body">
+    <nav class="mt-6">
+      <div class="flex justify-around">
+        <div class="font-bold">Vu Nguyen</div>
+        <div>
+          <ul class="font-medium">
+            <li class="inline mr-10"><a href="#">home</a></li>
+            <li class="inline mr-10"><a href="#">about</a></li>
+            <li class="inline mr-10"><a href="#">services</a></li>
+            <li class="inline mr-10"><a href="#">works</a></li>
+            <li class="inline mr-10"><a href="#">contact</a></li>
+          </ul>
+        </div>
+        <div id="dark-mode" class="cursor-pointer"><i class="fas fa-moon"></i></div>
+      </div>
+    </nav>
+    <div class="flex flex-row space-x-8 flex-grow justify-center items-center">
+      <div>
+        <img src="./public/images/avatar.jpg" class="rounded-full h-40 w-40" />
+      </div>
+      <div class="flex flex-col justify-between space-y-3">
+        <div class="text-3xl">Hi👋 I'm</div>
+        <div class="text-8xl font-extrabold">Vu Nguyen</div>
+        <div class="text-lg text-gray-500 spacing">I'm a full-stack developer in Saigon, Vietnam</div>
+        <div class="flex flex-row space-x-4">
+          <i class="fas fa-envelope fa-lg"></i>
+          <i class="fab fa-github fa-lg"></i>
+          <i class="fab fa-linkedin fa-lg"></i>
+        </div>
+      </div>
+    </div>
+    </div>
+    <script type="module" src="../src/index.js"></script>
+  </body>
+</html>
