@@ -8,12 +8,12 @@
     <link href="/public/css/style.css" rel="stylesheet" />
     <script src="https://kit.fontawesome.com/0a2c8281b6.js" crossorigin="anonymous"></script>
   </head>
-  <body class="min-h-screen flex flex-col justify-around bg-purple-100 dark:bg-gray-900 text-purple-900 dark:text-white font-body">
+  <body class="relative min-h-screen flex flex-col justify-around bg-purple-100 dark:bg-gray-900 text-purple-900 dark:text-white font-body">
     <nav class="mt-6">
       <div class="flex justify-around">
         <div class="font-bold">Vu Nguyen</div>
         <div>
-          <ul class="font-medium">
+          <ul class="hidden sm:block font-medium">
             <li class="inline mr-10"><a href="#">home</a></li>
             <li class="inline mr-10"><a href="#">about</a></li>
             <li class="inline mr-10"><a href="#">services</a></li>
@@ -21,18 +21,35 @@
             <li class="inline mr-10"><a href="#">contact</a></li>
           </ul>
         </div>
-        <div id="dark-mode" class="cursor-pointer"><i class="fas fa-moon"></i></div>
+        <div id="dark-mode" class="hidden sm:block cursor-pointer"><i class="fas fa-sun"></i></div>
+        <div id="mobile-menu" class="hidden w-full h-full absolute top-0 text-purple-900 dark:text-white bg-purple-100 dark:bg-gray-900 font-bold">
+          <ul class="flex flex-col items-center justify-center h-full text-4xl space-y-10">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">works</a></li>
+            <li><a href="#">contact</a></li>
+            <li>
+              <div id="dark-mode-mobile" class="cursor-pointer"><i class="fas fa-sun"></i></div>
+            </li>
+          </ul>
+        </div>
+        <button id="hamberger-btn" class="flex flex-col h-12 w-6 rounded items-center group">
+          <div id="hamberger-1" class="h-0.5 w-6 my-0.5 rounded-full bg-purple-900 dark:bg-white transition ease transform"></div>
+          <div id="hamberger-2" class="h-0.5 w-6 my-0.5 rounded-full bg-purple-900 dark:bg-white transition ease transform"></div>
+          <div id="hamberger-3" class="h-0.5 w-6 my-0.5 rounded-full bg-purple-900 dark:bg-white transition ease transform"></div>
+        </button>
       </div>
     </nav>
-    <div class="flex flex-row space-x-8 flex-grow justify-center items-center">
+    <div class="flex flex-col sm:flex-row space-y-1 sm:space-y-0 sm:space-x-8 flex-grow justify-center items-center">
       <div>
-        <img src="https://avatars.githubusercontent.com/u/16948762" class="rounded-full h-72 w-72" />
+        <img src="https://avatars.githubusercontent.com/u/16948762" class="rounded-full h-48 sm:h-72 w-48 sm:w-72" />
       </div>
-      <div class="flex flex-col justify-between space-y-3">
-        <div class="text-3xl">Hi👋 I'm</div>
-        <div class="text-8xl font-extrabold">Vu Nguyen</div>
-        <div class="text-lg text-gray-500 spacing">I'm a full-stack developer in Saigon, Vietnam</div>
-        <div class="flex flex-row space-x-4">
+      <div class="flex flex-col justify-center items-center sm:items-baseline sm:justify-between space-y-1 sm:space-y-3">
+        <div class="sm:text-3xl">Hi👋 I'm</div>
+        <div class="text-5xl sm:text-8xl font-extrabold">Vu Nguyen</div>
+        <div class="text-lg text-gray-500 spacing text-center">I'm a full-stack developer in Saigon, Vietnam</div>
+        <div class="flex flex-row justify-center space-x-4">
           <i class="fas fa-envelope fa-lg"></i>
           <i class="fab fa-github fa-lg"></i>
           <i class="fab fa-linkedin fa-lg"></i>
