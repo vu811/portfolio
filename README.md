@@ -1,3 +1,3 @@
-# My portfolio website
+# My portfolio website v1
 
-> Built with Javascript and TailwindCSS
+> Built with Vanilla JS and TailwindCSS
