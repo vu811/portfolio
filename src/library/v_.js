@@ -1,4 +1,5 @@
 import renderHtml from './renderHtml.js'
+import { routes } from '../routes/routes.js'
 
 const v_ = (function () {
   const methods = {}
@@ -6,6 +7,25 @@ const v_ = (function () {
   methods.get = async (name) => {
     const result = await renderHtml(name)
     return result
+  }
+
+  const render = async () => {
+    const route = routes.find((x) => x.path === location.pathname)
+    if (!route) {
+      route = {
+        template: 'notfound'
+      }
+    }
+    document.getElementById('app').innerHTML = await methods.get(route.template)
+  }
+
+  methods.redirectTo = (path) => {
+    history.pushState(null, null, path)
+    render()
+  }
+
+  methods.load = () => {
+    render()
   }
 
   return methods

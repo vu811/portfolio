@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss -i ./src/style.css -o ./public/style.css"
+    "build-css": "tailwindcss -i ./public/style.css -o ./public/css/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
