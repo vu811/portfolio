@@ -36,6 +36,10 @@ hambergerButton &&
     mobileMenu.classList.add('transition', 'duration-500', 'ease-in-out')
   })
 
+document.addEventListener('popstate', () => {
+  console.log('hihih')
+})
+
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded')
   document.body.addEventListener('click', (e) => {

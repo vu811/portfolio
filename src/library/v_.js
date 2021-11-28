@@ -10,10 +10,10 @@ const v_ = (function () {
   }
 
   const render = async () => {
-    const route = routes.find((x) => x.path === location.pathname)
+    let route = routes.find((x) => x.path === location.pathname)
     if (!route) {
       route = {
-        template: 'notfound'
+        template: '404'
       }
     }
     document.getElementById('app').innerHTML = await methods.get(route.template)
