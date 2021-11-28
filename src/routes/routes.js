@@ -10,5 +10,9 @@ export const routes = [
   {
     path: '#/about',
     template: 'about'
+  },
+  {
+    path: '#/services',
+    template: 'services'
   }
 ]

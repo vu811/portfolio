@@ -25,26 +25,25 @@ const hamberger2 = document.getElementById('hamberger-2')
 const hamberger3 = document.getElementById('hamberger-3')
 const mobileMenu = document.getElementById('mobile-menu')
 
-hambergerButton &&
-  hambergerButton.addEventListener('click', () => {
-    hamberger1.classList.toggle('rotate-45')
-    hamberger1.classList.toggle('translate-y-1.5')
-    hamberger2.classList.toggle('opacity-0')
-    hamberger3.classList.toggle('-rotate-45')
-    hamberger3.classList.toggle('-translate-y-1.5')
-    mobileMenu.classList.toggle('hidden')
-    mobileMenu.classList.add('transition', 'duration-500', 'ease-in-out')
-  })
+const handleChangeHambergerButton = () => {
+  hamberger1.classList.toggle('rotate-45')
+  hamberger1.classList.toggle('translate-y-1.5')
+  hamberger2.classList.toggle('opacity-0')
+  hamberger3.classList.toggle('-rotate-45')
+  hamberger3.classList.toggle('-translate-y-1.5')
+  mobileMenu.classList.toggle('hidden')
+}
 
-document.addEventListener('popstate', () => {
-  console.log('hihih')
-})
+hambergerButton && hambergerButton.addEventListener('click', () => handleChangeHambergerButton())
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded')
   document.body.addEventListener('click', (e) => {
     if (e.target.matches('.link')) {
       e.preventDefault()
+      if (!mobileMenu.classList.contains('hidden')) {
+        handleChangeHambergerButton()
+      }
       v_.redirectTo(e.target.href)
     }
   })
