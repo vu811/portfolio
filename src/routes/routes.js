@@ -14,5 +14,13 @@ export const routes = [
   {
     path: '#/services',
     template: 'services'
+  },
+  {
+    path: '#/works',
+    template: 'works'
+  },
+  {
+    path: '#/contact',
+    template: 'contact'
   }
 ]
