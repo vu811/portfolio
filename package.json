@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "netlify-lambda build express",
-    "start": "nodemon server-local.js",
+    "dev": "nodemon server.js",
     "build-css": "tailwindcss -i ./public/style.css -o ./public/css/style.css"
   },
   "keywords": [],
@@ -13,9 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "express": "^4.17.1",
-    "netlify-lambda": "^2.0.15",
     "nodemon": "^2.0.15",
-    "serverless-http": "^2.7.0",
     "tailwindcss": "^2.2.19"
   }
 }
