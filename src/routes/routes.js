@@ -1,16 +1,14 @@
-import About from '../components/about.js'
-
 export const routes = [
   {
-    path: '/',
+    path: '',
     template: 'home'
   },
   {
-    path: '/home',
+    path: '#/home',
     template: 'homne'
   },
   {
-    path: '/about',
+    path: '#/about',
     template: 'about'
   }
 ]

@@ -10,7 +10,7 @@ const v_ = (function () {
   }
 
   const render = async () => {
-    let route = routes.find((x) => x.path === location.pathname)
+    let route = routes.find((x) => x.path === location.hash)
     if (!route) {
       route = {
         template: '404'

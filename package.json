@@ -11,8 +11,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.17.1",
-    "nodemon": "^2.0.15",
     "tailwindcss": "^2.2.19"
   }
 }
