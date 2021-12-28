@@ -3,6 +3,7 @@ import v_ from './library/v_.js'
 const darkMode = document.getElementById('dark-mode')
 const darkModeMobile = document.getElementById('dark-mode-mobile')
 const html = document.querySelector('html')
+const logo = document.getElementById('logo')
 
 const handleClickThemeButton = (element) => {
   const changeToLightMode = element.innerHTML.includes('sun')
@@ -10,9 +11,11 @@ const handleClickThemeButton = (element) => {
   if (changeToLightMode) {
     html.classList.remove('dark')
     icon = 'moon'
+    logo.setAttribute('src', '/public/images/logo/811-logo-purple.png')
   } else {
     html.classList.add('dark')
     icon = 'sun'
+    logo.setAttribute('src', '/public/images/logo/811-logo-white.png')
   }
   element.innerHTML = `<i class="fas fa-${icon}"></i>`
 }
