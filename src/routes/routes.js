@@ -15,10 +15,10 @@ export const routes = [
     path: '#/experiences',
     template: 'experiences'
   },
-  {
-    path: '#/services',
-    template: 'services'
-  },
+  // {
+  //   path: '#/services',
+  //   template: 'services'
+  // },
   {
     path: '#/works',
     template: 'works'
